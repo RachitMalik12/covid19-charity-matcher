@@ -4,8 +4,8 @@
         <div style="padding: 14px; ">
                 <span>{{title}}</span>
         <div :class="bottom">
-          <el-button @click="openDonationLink()" type="text"  >Click to donate</el-button>
-          <el-button @click="openLearnMoreLink()" type = "text" > Learn More </el-button>
+          <el-button @click="openDonationLink()" type="text"> Click to donate</el-button>
+          <el-button @click="openLearnMoreLink()" type = "text"> Learn More </el-button>
 
         </div>
       </div>
