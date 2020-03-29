@@ -13,7 +13,7 @@ const routes = [
   },
   {
     path: '/local',
-    name: 'local',
+    name: 'Local',
     component: Local
   },
   {
