@@ -13,8 +13,8 @@ With the recent lockdowns in light of the Covid-19 pandemic, almost all of us ha
 <p> Find a list of charities dedicated to helping daily wage workers in the Indian subcontinent below and simply click to donate!  </p>
 <p> If you are not in India and want to donate to other causes </p> 
 <el-button type="primary" round> Click here! </el-button>
-<CharityList/>
-    </el-main>
+ <CharityList/>
+  </el-main>
   </el-container>
 
   
