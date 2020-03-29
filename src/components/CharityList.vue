@@ -1,5 +1,9 @@
 <template>
          <el-row>
+             <el-col :span="24">
+                 <h2> Here are a list of charities to help daily wage workers in India curated by us. Help us out by adding more to our database 
+                     Please fill out this <a href="https://docs.google.com/forms/d/1bADkSlBwC5JJbt34d9Z6XCZGn_LAAmQDgXD_ZDU9LTw">form </a> to add a new charity </h2>
+             </el-col>
              <el-col :span="4" v-for = "charity in charities.slice(0,3)"  v-bind:key = "charity.id" :offset= "charity.id > 0 ? 2 : 0">
                
                   <Charity v-bind:imageUrl = "charity.imageUrl" 
@@ -98,11 +102,11 @@ export default {
 
 <style>
   .el-col {
-      margin-bottom: 100px;
+      margin-bottom: 75px;
   }
 
   .el-row {
-      margin-top: 100px
+      margin-top: 25px
   }
 
  </style>
