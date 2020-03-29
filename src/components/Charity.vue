@@ -12,11 +12,6 @@
      </el-card>
 </template>
 
-
-
-
-
-
 <script>
 export default {
     name: "Charity",
@@ -53,20 +48,11 @@ export default {
 }
 
   .image {
-    width: 50%;
-    height: 50%; 
+    width: 100%;
+    height: 100%; 
     display: block;
   }
-/* 
-  .clearfix:before,
-  .clearfix:after {
-      display: table;
-      content: "";
-  }
-  
-  .clearfix:after {
-      clear: both
-  } */
+
   .card {
       width: 400px;
       height: 400px;

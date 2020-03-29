@@ -91,21 +91,12 @@ export default {
         Charity
     },
     methods: {
-       filteredCharities() {
-           return this.charities.slice(3,7)
-       }
     }
 }
 </script>
 
 
 <style>
-  
-  .bottom {
-    margin-top: 13px;
-    line-height: 12px;
-  }
-
   .el-col {
       margin-bottom: 100px;
   }
@@ -114,23 +105,4 @@ export default {
       margin-top: 100px
   }
 
-  .button {
-    padding: 0;
-    float: right;
-  }
-
-  .image {
-    width: 100%;
-    display: block;
-  }
-
-  .clearfix:before,
-  .clearfix:after {
-      display: table;
-      content: "";
-  }
-  
-  .clearfix:after {
-      clear: both
-  }
-</style>
+ </style>
