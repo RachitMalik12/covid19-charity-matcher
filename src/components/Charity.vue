@@ -1,11 +1,11 @@
 <template>
      <el-card :body-style="{ padding: '0px' }" class = "card">
         <img :src = "imageUrl" class="image">
-        <div style="padding: 14px;">
+        <div style="padding: 14px; ">
                 <span>{{title}}</span>
-        <div class="bottom clearfix">
-          <el-button @click="openDonationLink()" type="text" class="button">Click to donate</el-button>
-          <el-button @click="openLearnMoreLink()" type = "text" class = "button"> Learn More </el-button>
+        <div :class="bottom">
+          <el-button @click="openDonationLink()" type="text"  >Click to donate</el-button>
+          <el-button @click="openLearnMoreLink()" type = "text" > Learn More </el-button>
 
         </div>
       </div>
@@ -35,27 +35,29 @@ export default {
 </script>
 
 <style >
-  .time {
-    font-size: 13px;
-    color: #999;
-  }
   
   .bottom {
     margin-top: 13px;
     line-height: 12px;
+    margin: 0 auto;
+     width: 656px; 
+     text-align: center;
   }
 
-  .button {
-    padding: 0;
-    float: right;
-  }
+  .el-button {
+    margin-right: 20px; 
+}
+
+.span {
+    margin-bottom: 20px;
+}
 
   .image {
     width: 50%;
     height: 50%; 
     display: block;
   }
-
+/* 
   .clearfix:before,
   .clearfix:after {
       display: table;
@@ -64,7 +66,7 @@ export default {
   
   .clearfix:after {
       clear: both
-  }
+  } */
   .card {
       width: 400px;
       height: 400px;

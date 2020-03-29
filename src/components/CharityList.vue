@@ -8,7 +8,16 @@
                          v-bind:learnMoreUrl = "charity.learnMoreUrl"/>
                 
     </el-col>
-       <el-col :span="4" v-for = "charity in charities.slice(3,6)" v-bind:key = "charity.id" :offset= "2">
+       <el-col :span="4" v-for = "charity in charities.slice(3,5)" v-bind:key = "charity.id" :offset= "2">
+               
+                  <Charity v-bind:imageUrl = "charity.imageUrl" 
+                         v-bind:title = "charity.title"
+                         v-bind:donateNowUrl = "charity.donateNowUrl"
+                         v-bind:learnMoreUrl = "charity.learnMoreUrl"/>
+                
+    </el-col>
+    <!-- hack for increasing offset for the last element -->
+     <el-col :span="4" v-for = "charity in charities.slice(5,6)" v-bind:key = "charity.id" :offset= "8">
                
                   <Charity v-bind:imageUrl = "charity.imageUrl" 
                          v-bind:title = "charity.title"
@@ -91,14 +100,18 @@ export default {
 
 
 <style>
-  .time {
-    font-size: 13px;
-    color: #999;
-  }
   
   .bottom {
     margin-top: 13px;
     line-height: 12px;
+  }
+
+  .el-col {
+      margin-bottom: 100px;
+  }
+
+  .el-row {
+      margin-top: 100px
   }
 
   .button {
