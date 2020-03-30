@@ -1,18 +1,10 @@
 <template>
-    <!-- <div class="charity-item">
-         <p>
-       {{charity.charityName}}
-       <el-button type = "primary" @click = "handleClick"> Donate! </el-button>
-       </p> 
-        
-    </div> -->
-    
-            <el-card class="box-card">
-            <div slot="header" class="clearfix">
-                <span>{{charity.charityName}}</span>
-                 <el-button style="float: right; padding: 3px 0" type="text" @click ="handleClick"> Donate!</el-button>
-            </div>
-            </el-card>
+<el-card class="box-card">
+    <div slot="header" class="clearfix">
+      <span>{{charity.charityName}}</span>
+        <el-button style="float: right; padding: 3px 0" type="text" @click ="handleClick"> Donate!</el-button>
+    </div>
+  </el-card>
      
 </template>
 

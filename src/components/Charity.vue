@@ -1,9 +1,9 @@
 <template>
      <el-card :body-style="{ padding: '0px' }" class = "card">
         <img :src = "imageUrl" class="image">
-        <div style="padding: 14px; ">
+        <div style="padding: 14px; position:relative; height:70px;">
                 <span>{{title}}</span>
-        <div :class="bottom">
+        <div style ="position: absolute; bottom:0">
           <el-button @click="openDonationLink()" type="text"> Click to donate</el-button>
           <el-button @click="openLearnMoreLink()" type = "text"> Learn More </el-button>
 
@@ -49,7 +49,7 @@ export default {
 
   .image {
     width: 100%;
-    height: 100%; 
+    height: 299.83px; 
     display: block;
   }
 
