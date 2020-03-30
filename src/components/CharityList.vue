@@ -53,7 +53,7 @@ export default {
               },
               {
                   id: "1", 
-                  title: "Zomato- feed the daily wage worker", 
+                  title: "Zomato: Feed the daily wage worker", 
                   imageUrl: "https://d2zcpk7yfyf2dq.cloudfront.net/milaap/image/upload/s--rPxoYVDq--/c_fill,e_viesus_correct,g_faces,h_452,w_603/v1585023913/production/images/campaign/151319/Milaap-Image_kibqxo_1585023921.jpg",
                   donateNowUrl: "https://milaap.org/checkout?utf8=%E2%9C%93&currency=inr&payable_amount=500&origin_id=151319&origin_type=FundraiserCampaign&page_referrer_id=&page_referrer_type=&commit=Donate+now",
                   learnMoreUrl: "https://milaap.org/fundraisers/support-zomato-feeding-india?community=10177"
@@ -68,7 +68,7 @@ export default {
               },
               {
                   id: "3", 
-                  title: "Help Trans community in their fight against Corona",
+                  title: "Help Trans community in their fight against Coronavirus",
                   imageUrl: "https://d2zcpk7yfyf2dq.cloudfront.net/milaap/image/upload/s--uTT-c3Ug--/c_fill,e_viesus_correct,g_faces,h_452,w_603/v1585050451/production/images/campaign/151682/Trans_m5ikhi_1585050458.jpg",
                   donateNowUrl:"https://milaap.org/checkout?utf8=%E2%9C%93&currency=inr&payable_amount=2500&origin_id=151682&origin_type=FundraiserCampaign&page_referrer_id=&page_referrer_type=&commit=Donate+now",
                   learnMoreUrl: "https://milaap.org/fundraisers/support-kanaga?community=10177"
@@ -76,7 +76,7 @@ export default {
               },
               {
                 id: "4", 
-                title: "Fight Against Coronavirus",
+                title: "Fight Against Coronavirus: Raw and cooked foods distribution",
                 imageUrl:"https://d2zcpk7yfyf2dq.cloudfront.net/milaap/image/upload/s--d_ZZ6I_q--/c_fill,e_viesus_correct,g_faces,h_452,w_603/v1584595071/production/images/campaign/150031/90449719_1369833983188767_7519053860464230400_n_1584535147_pmfve2_1584595075.jpg",
                 donateNowUrl:"https://milaap.org/checkout?utf8=%E2%9C%93&currency=inr&payable_amount=2500&origin_id=150031&origin_type=FundraiserCampaign&page_referrer_id=&page_referrer_type=&commit=Donate+now",
                 learnMoreUrl:"https://milaap.org/fundraisers/support-rahul-sharma-2?community=10177"

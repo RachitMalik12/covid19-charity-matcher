@@ -2,7 +2,7 @@
 <el-card class="box-card">
     <div slot="header" class="clearfix">
       <span>{{charity.charityName}}</span>
-        <el-button style="float: right; padding: 3px 0" type="text" @click ="handleClick"> Donate!</el-button>
+        <el-button style="float: right; padding: 3px 0" type="text" @click ="handleClick"> Learn More and Donate!</el-button>
     </div>
   </el-card>
      
