@@ -9,7 +9,7 @@
   </el-row>
   <el-row>
     <el-col :span = "24">
-    <h2> Do your part to help daily wage workers in India! </h2>
+    <h1 class="h1"> Do your part to help daily wage workers in India! </h1>
     <p class = "p"> Nearly 90% of India’s workforce belongs to the informal sector. 
       About 450 million Indians depend on daily wages to run their household
       With the recent lockdowns in India, while most of us have adapted to working from home, the income of these daily wage workers have come to a halt. 
