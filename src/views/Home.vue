@@ -1,25 +1,64 @@
 <template>
-  <div class="home">
-    <h1>COVID-19 charity match - we connect you to charities you can donate to provide relief for COVID-19 </h1>
+<div>
+  <el-row>
+    <el-col :span = "24" >
+    <h1 class="h1">COVID-19 Charity Match</h1>
+    <h3> Giving you the means to help out during this crises. </h3> 
+    <el-image :src = "url" :fit = "fit"/>
+    </el-col>
+  </el-row>
+  <el-row>
+    <el-col :span = "24">
     <h2> Do your part to help daily wage workers in India! </h2>
-    <p> Nearly 90% of India’s workforce belongs to the informal sector. That means, about 450 million Indians depend on daily wages to run their household.(1)
-
-    With the recent lockdowns in light of the Covid-19 pandemic, almost all of us have quickly adapted to working from home, while a large part of our community has been going to bed without knowing if they will be able to afford a meal for their family the next day. Workers at construction sites, shops, restaurants, delivery staff and local transport systems, the daily wager community has seen their only source of income come to a screeching halt, leaving them with no means to earn themselves a meal during these days of lockdown. Hunger and desperation prevails, and we can do something to help our fellow citizens.
+    <p class = "p"> Nearly 90% of India’s workforce belongs to the informal sector. 
+      About 450 million Indians depend on daily wages to run their household
+      With the recent lockdowns in India, while most of us have adapted to working from home, the income of these daily wage workers have come to a halt. 
+      They now have a no way of getting food on their table.
     </p>
-    <p> Find a list of charities dedicated to helping daily wage workers in the Indian subcontinent below and simply click to donate!  </p>
-    <p> If you are not in India and want to donate to other causes </p> 
-    <el-button type="primary" round> Click here! </el-button>
+    <p class = "p"> You can help out by donating!</p>
+    <p class = "p"> If you want to help out by donating in the new center of the pandemic the US: </p> 
+    <el-button type="primary" round @click = "$router.push('/local')"> Click here! </el-button>
+    </el-col>
+  </el-row>
     <CharityList/>
-  </div>
+</div>
 </template>
 
 <script>
 // @ is an alias to /src
 import CharityList from '../components/CharityList'
+import image from '../assets/1295065.png'
 export default {
   name: 'Home',
   components: {
     CharityList
+  },
+  data() {
+    return {
+    url: image,
+    fit: "contain"
+    }
   }
 }
 </script>
+
+<style scoped>
+
+.el-col {
+   text-align: center;
+   display: table; 
+   margin-bottom: 10px; 
+}
+
+.el-image {
+  width: 600px;
+  height: 600px;
+}
+ .h1 {
+  font-size: 50px; 
+ }
+
+ .p {
+   font-size: 20px; 
+ }
+</style>

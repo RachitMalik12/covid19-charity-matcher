@@ -1,54 +1,63 @@
 <template>
     <div class="local">
-        <el-row :gutter="20">
-            <el-col :span="12" :offset="6">
+        <el-row :gutter="20" >
+            <el-col :span="12">
                 <div class="grid-content bg-purple">
-                    <h3>Enter name of your city (US only)</h3>
-                    <el-autocomplete placeholder="Please input" v-model="searchCity" :trigger-on-focus="false" :fetch-suggestions="querySearchAsync" @select="handleSearch"></el-autocomplete>
+                    <el-input placeholder="Enter city (US-only)" v-model="searchCity"></el-input>
                 </div>
             </el-col>
+            <el-col :span="12">
+                <el-button type="primary" @click="handleSearch"> Search </el-button>
+            </el-col> 
         </el-row>
+        <el-row> 
+            <el-col :span="24" v-for = "city in cities" v-bind:key = "city.orgID">
+                <WorldWideCharityItem v-bind:charity = "city"/>
+            </el-col>
+        </el-row>
+
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import axios from 'axios'
-
+import WorldWideCharityItem from '../components/WorldWideCharityItem'
 export default {
   name: 'local',
   data() {
       return {
           searchCity: "",
-          cities: "",
+          cities: [],
+          error: '', 
           timeout:  null
       }
   },
-  methods: {
-      querySearchAsync(queryString, cb) {
-        var cities = this.cities;
-        var results = queryString ? cities.filter(this.createFilter(queryString)) : cities;
-        clearTimeout(this.timeout);
-        this.timeout = setTimeout(() => {
-          cb(results);
-          console.log(results);
-        }, 3000 * Math.random());
-      },
-      createFilter(queryString) {
-        return (city) => {
-          return (city.city.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
-        };
-      },
-      handleSearch(city) {
-        axios
-            .get('https://api.data.charitynavigator.org/v2/Organizations?app_id=90472cd5&app_key=410891f19ebea8184b78cba11ff58064&city='+city)
-            .then(response => console.log(response))
-      }
+  components:{
+      WorldWideCharityItem
   },
-  mounted () {
-      this.cities = require("../assets/usa_cities.json");
-      console.log(this.cities);
+  methods: {
+      handleSearch() {
+        axios
+            .get('https://api.data.charitynavigator.org/v2/Organizations?app_id=90472cd5&app_key=410891f19ebea8184b78cba11ff58064&city='+ this.searchCity)
+            .then(response => this.cities = response.data)
+            .catch(err => this.handleError(err))
+      },
+      handleError(err) {
+          if (err.message === "Request failed with status code 404") {
+              this.error = `Could not find city: ${this.searchCity}`
+          }
+          else {
+              this.error = err.message
+          }
+          this.$message.error({
+                showClose: true, 
+                title: 'Sorry, something went wrong',
+               message: this.error
+        })
+    }
   }
+
 }
 </script>
 
@@ -56,4 +65,7 @@ export default {
     .grid-content {
         text-align: center;
     }
+    .el-col {
+        margin-bottom: 20px; 
+    } 
 </style>
