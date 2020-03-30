@@ -2,8 +2,8 @@
 <div>
   <el-row>
     <el-col :span = "24" >
-    <h1 class="h1">COVID-19 Charity Match</h1>
-    <h3> Giving you the means to help out during this crises. </h3> 
+    <h1 class="h1">COVID-19 Charity Matcher</h1>
+    <h3> The one place to find all charities, giving you the means to help out during this crisis. </h3> 
     <el-image :src = "url" :fit = "fit"/>
     </el-col>
   </el-row>
