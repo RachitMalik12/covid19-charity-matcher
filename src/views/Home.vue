@@ -13,11 +13,11 @@
     <p class = "p"> Nearly 90% of India’s workforce belongs to the informal sector. 
       About 450 million Indians depend on daily wages to run their household
       With the recent lockdowns in India, while most of us have adapted to working from home, the income of these daily wage workers have come to a halt. 
-      They now have a no way of getting food on their table.
+      They now have no way of getting food on their table.
     </p>
     <p class = "p"> You can help out by donating!</p>
-    <p class = "p"> If you want to help out by donating in the new center of the pandemic the US: </p> 
-    <el-button type="primary" round @click = "$router.push('/local')"> Click here! </el-button>
+    <p class = "p"> If you are not in India or if you want to help out by donating in the US (new epicenter of the pandemic): </p> 
+    <el-button type="primary" round @click = "$router.push('/local')"> Find charities in the US </el-button>
     </el-col>
   </el-row>
     <CharityList/>
