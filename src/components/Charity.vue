@@ -6,6 +6,7 @@
         <div style ="position: absolute; bottom:0">
           <el-button @click="openDonationLink()" type="text"> Click to donate</el-button>
           <el-button @click="openLearnMoreLink()" type = "text"> Learn More </el-button>
+          <el-button type="text"> Save charity </el-button>
 
         </div>
       </div>

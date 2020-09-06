@@ -25,6 +25,10 @@ export default {
             this.$router.push({name:"Local"})
             this.activeIndex = "2"
             break;
+          case "3":
+            this.$router.push({name: "MyCharities"})
+            this.activeIndex = "3"
+            break; 
           default:
             this.$router.push({name:"Home"})
             this.activeIndex = "1"
