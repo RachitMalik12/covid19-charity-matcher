@@ -6,7 +6,7 @@
         <div style ="position: absolute; bottom:0">
           <el-button @click="openDonationLink()" type="text"> Click to donate</el-button>
           <el-button @click="openLearnMoreLink()" type = "text"> Learn More </el-button>
-          <el-button type="text"> Save charity </el-button>
+          <el-button type="text" @click="onSaveCharity()"> Save charity </el-button>
 
         </div>
       </div>
@@ -14,9 +14,10 @@
 </template>
 
 <script>
+// import db from '../firebase'
 export default {
     name: "Charity",
-    props: ["imageUrl", "donateNowUrl", "learnMoreUrl", "title"],
+    props: ["id", "imageUrl", "donateNowUrl", "learnMoreUrl", "title"],
     methods: {
         openDonationLink() {
             const win = window.open(this.donateNowUrl)
@@ -25,7 +26,13 @@ export default {
         openLearnMoreLink(){
             const win = window.open(this.learnMoreUrl)
             win.focus()
-        }
+        }, 
+        // onSaveCharity(){
+        //   db.collection("charities").doc(this.id).set({
+        //     title: ""
+        //   })
+        // }
+
     }
 }
 </script>

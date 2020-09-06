@@ -1,7 +1,8 @@
 <template>
   <el-container>
     <el-header>
-    <NavBar/>
+    <NavBar v-if= "user"/>
+    <Register v-if="!user"/>
     </el-header>
     <el-main>
       <router-view></router-view>
@@ -12,11 +13,19 @@
 <script>
 
 import NavBar from './components/NavBar'
+import { mapGetters } from "vuex";
 export default {
   name: 'app',
   components: {
     NavBar,
+  }, 
+   computed: {
+    // map `this.user` to `this.$store.getters.user`
+    ...mapGetters({
+      user: "user"
+    })
   }
+
 }
 </script>
 

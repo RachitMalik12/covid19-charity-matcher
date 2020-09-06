@@ -51,15 +51,18 @@ export default {
       handleError(err) {
           if (err.message === "Request failed with status code 404") {
               this.error = `Could not find city: ${this.searchCity}`
+              this.loading = false 
           }
           else {
               this.error = err.message
+              this.loading = false
           }
           this.$message.error({
                 showClose: true, 
                 title: 'Sorry, something went wrong',
                message: this.error
         })
+        this.loading = false
     }
   }
 
