@@ -74,20 +74,6 @@ export default {
                   learnMoreUrl: "https://milaap.org/fundraisers/support-kanaga?community=10177"
 
               },
-              {
-                id: "4", 
-                title: "Fight Against Coronavirus: Raw and cooked foods distribution",
-                imageUrl:"https://d2zcpk7yfyf2dq.cloudfront.net/milaap/image/upload/s--d_ZZ6I_q--/c_fill,e_viesus_correct,g_faces,h_452,w_603/v1584595071/production/images/campaign/150031/90449719_1369833983188767_7519053860464230400_n_1584535147_pmfve2_1584595075.jpg",
-                donateNowUrl:"https://milaap.org/checkout?utf8=%E2%9C%93&currency=inr&payable_amount=2500&origin_id=150031&origin_type=FundraiserCampaign&page_referrer_id=&page_referrer_type=&commit=Donate+now",
-                learnMoreUrl:"https://milaap.org/fundraisers/support-rahul-sharma-2?community=10177"
-              },
-              {
-                  id: "5", 
-                  title: "Help us provide Habitat Family Essential Kits to the underprivileged to fight against COVID-19",
-                  imageUrl:"https://d1vdjc70h9nzd9.cloudfront.net/media/campaign/173000/173742/image/5e74d1a895f57.jpeg",
-                  donateNowUrl:"https://covid19.ketto.org/fundraiser/hfhhandwashcampaigntofightcovid19#/contributemodal",
-                  learnMoreUrl:"https://covid19.ketto.org/fundraiser/hfhhandwashcampaigntofightcovid19"
-              }
           ]
       }
     },

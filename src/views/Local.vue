@@ -7,7 +7,7 @@
                 </div>
             </el-col>
             <el-col :span="12">
-                <el-button type="primary" @click="handleSearch"> Search </el-button>
+                <el-button v-loading.fullscreen.lock="loading" type="primary" @click="handleSearch"> Search </el-button>
             </el-col> 
         </el-row>
         <el-row> 
@@ -30,7 +30,8 @@ export default {
           searchCity: "",
           cities: [],
           error: '', 
-          timeout:  null
+          timeout:  null, 
+          loading: false 
       }
   },
   components:{
@@ -38,9 +39,13 @@ export default {
   },
   methods: {
       handleSearch() {
+          this.loading = true;
         axios
             .get('https://api.data.charitynavigator.org/v2/Organizations?app_id=90472cd5&app_key=410891f19ebea8184b78cba11ff58064&city='+ this.searchCity)
-            .then(response => this.cities = response.data)
+            .then(response => {
+                this.cities = response.data
+                this.loading = false 
+            })
             .catch(err => this.handleError(err))
       },
       handleError(err) {

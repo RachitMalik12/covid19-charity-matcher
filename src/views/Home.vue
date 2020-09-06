@@ -2,9 +2,9 @@
 <div>
   <el-row>
     <el-col :span = "24" >
-    <h1 class="h1">COVID-19 Charity Matcher</h1>
+    <h1 class="h1 animate__animated animate__fadeInLeft">COVID-19 Charity Matcher</h1>
     <h3> The one place to find all charities, giving you the means to help out during this crisis. </h3> 
-    <el-image :src = "url" :fit = "fit"/>
+    <el-image class="animate__animated animate__fadeInLeft" :src = "url" :fit = "fit"/>
     </el-col>
   </el-row>
   <el-row>
