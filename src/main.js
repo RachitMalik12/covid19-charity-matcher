@@ -47,4 +47,17 @@ firebase
     render: h => h(AuthApp)
   }).$mount('#app')
 
+  const db = firebase.firestore()
+// const auth = firebase.auth()
+
+// collection references
+const usersCollection = db.collection('users')
+const charitiesCollection = db.collection('charities')
+
+export {
+    db,
+    usersCollection,
+    charitiesCollection
+  }
+
 

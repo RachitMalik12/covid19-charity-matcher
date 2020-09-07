@@ -14,10 +14,20 @@
 </template>
 
 <script>
-// import db from '../firebase'
+import {db} from '../main'
+import { mapGetters } from "vuex";
+import {v4 as uuidv4} from 'uuid'; 
+
+
 export default {
     name: "Charity",
     props: ["id", "imageUrl", "donateNowUrl", "learnMoreUrl", "title"],
+    computed: {
+    // map `this.user` to `this.$store.getters.user`
+    ...mapGetters({
+      user: "user"
+    })
+  },
     methods: {
         openDonationLink() {
             const win = window.open(this.donateNowUrl)
@@ -27,11 +37,29 @@ export default {
             const win = window.open(this.learnMoreUrl)
             win.focus()
         }, 
-        // onSaveCharity(){
-        //   db.collection("charities").doc(this.id).set({
-        //     title: ""
-        //   })
-        // }
+        onSaveCharity(){
+          const userRef = db.collection('charities').doc(this.user.data.email) 
+          const myCharitiesRef = userRef.collection('mycharities').doc(uuidv4())
+          myCharitiesRef.set({
+            charityName: this.title, 
+            charityNavigatorURL: this.learnMoreUrl
+          }).
+          then(() => {
+            this.$notify({
+              title:"Successfully saved charity", 
+              message: 'Click my charities to view all your saved charities',
+              type: 'success'
+
+            }).
+            catch((err) => {
+              this.$$notify.error({
+                title: "Could not save charity", 
+                message: err.message
+              })
+            })
+
+          })
+        }
 
     }
 }

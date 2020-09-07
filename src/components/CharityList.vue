@@ -6,7 +6,8 @@
              </el-col>
              <el-col :span="4" v-for = "charity in charities.slice(0,3)"  v-bind:key = "charity.id" :offset= "charity.id > 0 ? 2 : 0">
                
-                  <Charity v-bind:imageUrl = "charity.imageUrl" 
+                  <Charity v-bind:id = "charity.id"
+                         v-bind:imageUrl = "charity.imageUrl" 
                          v-bind:title = "charity.title"
                          v-bind:donateNowUrl = "charity.donateNowUrl"
                          v-bind:learnMoreUrl = "charity.learnMoreUrl"/>
@@ -14,7 +15,8 @@
     </el-col>
        <el-col :span="4" v-for = "charity in charities.slice(3,5)" v-bind:key = "charity.id" :offset= "2">
                
-                  <Charity v-bind:imageUrl = "charity.imageUrl" 
+                  <Charity v-bind:id = "charity.id"
+                        v-bind:imageUrl = "charity.imageUrl" 
                          v-bind:title = "charity.title"
                          v-bind:donateNowUrl = "charity.donateNowUrl"
                          v-bind:learnMoreUrl = "charity.learnMoreUrl"/>
@@ -23,7 +25,8 @@
     <!-- hack for increasing offset for the last element -->
      <el-col :span="4" v-for = "charity in charities.slice(5,6)" v-bind:key = "charity.id" :offset= "8">
                
-                  <Charity v-bind:imageUrl = "charity.imageUrl" 
+                  <Charity v-bind:id = "charity.id"
+                        v-bind:imageUrl = "charity.imageUrl" 
                          v-bind:title = "charity.title"
                          v-bind:donateNowUrl = "charity.donateNowUrl"
                          v-bind:learnMoreUrl = "charity.learnMoreUrl"/>
