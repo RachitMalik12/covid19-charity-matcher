@@ -40,7 +40,7 @@ export default {
   },
   methods: {
   getData() {
-      const snapshot = db.collection('charities').doc(this.user.data.email).
+      const snapshot = db.collection('charities').doc(this.user.data.id).
       collection('mycharities').get()
       this.loading = true 
       snapshot.then((querySnapshot) => {

@@ -12,7 +12,7 @@
         </el-row>
         <el-row> 
             <el-col :span="24" v-for = "city in cities" v-bind:key = "city.orgID">
-                <WorldWideCharityItem v-bind:charity = "city"/>
+                <WorldWideCharityItem v-bind:save ="true" v-bind:charity = "city"/>
             </el-col>
         </el-row>
 

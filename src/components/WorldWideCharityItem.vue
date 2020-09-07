@@ -28,7 +28,7 @@ export default {
           win.focus()
         },
         handleSave() {
-          const userRef = db.collection('charities').doc(this.user.data.email) 
+          const userRef = db.collection('charities').doc(this.user.data.id) 
           const myCharitiesRef = userRef.collection('mycharities').doc(uuidv4())
           myCharitiesRef.set({
             charityName: this.charity.charityName, 

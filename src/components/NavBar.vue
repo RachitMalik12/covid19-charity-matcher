@@ -6,7 +6,7 @@
     <el-menu-item index="3">My saved charities</el-menu-item>
      
   </el-menu>
-  <el-button type = "primary" @click="handleSignOut"> Sign Out </el-button>
+  <el-button type = "text" @click="handleSignOut"> Sign Out </el-button>
 </el-container>
  
 </template>
