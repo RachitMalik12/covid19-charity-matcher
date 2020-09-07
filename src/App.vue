@@ -1,19 +1,18 @@
 <template>
 <el-container> 
-  <LandingPage v-if="!user.loggedIn"/>
   <AuthApp v-if ="user.loggedIn"/> 
   </el-container>
 </template>
 
 <script>
 
-import LandingPage from './views/LandingPage'
+// import LandingPage from './views/LandingPage'
 import AuthApp from './AuthApp'
 import { mapGetters } from "vuex";
 export default {
   name: 'app',
   components: {
-    LandingPage, 
+    // LandingPage, 
     AuthApp 
   }, 
    computed: {
