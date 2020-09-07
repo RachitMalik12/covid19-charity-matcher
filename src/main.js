@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import AuthApp from './AuthApp.vue'
+import App from './App.vue'
 import router from './router'
 // import routernonauth from './routernonauth'
 import './plugins/element.js'
@@ -28,10 +28,7 @@ firebase.analytics();
 
 
 firebase.auth().onAuthStateChanged(user => {
-
-    store.dispatch("fetchUser", user); 
-  
-
+  store.dispatch("fetchUser", user); 
 })
 firebase
 .auth()
@@ -44,7 +41,7 @@ firebase
   new Vue({
     router,
     store, 
-    render: h => h(AuthApp)
+    render: h => h(App)
   }).$mount('#app')
 
   const db = firebase.firestore()

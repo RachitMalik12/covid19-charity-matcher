@@ -21,7 +21,7 @@
 // @ is an alias to /src
 import image from '../assets/1295065.png'
 export default {
-  name: 'UnAuthAppLanding',
+  name: 'LandingPage',
   data() {
     return {
     url: image,

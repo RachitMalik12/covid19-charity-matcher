@@ -1,22 +1,20 @@
 <template>
-  <el-container>
-    <el-header>
-    <NavBar />
-    </el-header>
-    <el-main>
-      <router-view> </router-view>
-    </el-main>
+<el-container> 
+  <LandingPage v-if="!user.loggedIn"/>
+  <AuthApp v-if ="user.loggedIn"/> 
   </el-container>
 </template>
 
 <script>
 
-import NavBar from './components/NavBar'
+import LandingPage from './views/LandingPage'
+import AuthApp from './AuthApp'
 import { mapGetters } from "vuex";
 export default {
-  name: 'AuthApp',
+  name: 'app',
   components: {
-    NavBar
+    LandingPage, 
+    AuthApp 
   }, 
    computed: {
     // map `this.user` to `this.$store.getters.user`
